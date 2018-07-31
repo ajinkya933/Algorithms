@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/ajinkyabobade/Downloads/cnn-text-classification-tf-master/runs/1532583909/checkpoints/model-400"
+all_model_checkpoint_paths: "/Users/ajinkyabobade/Downloads/cnn-text-classification-tf-master/runs/1532583909/checkpoints/model-400"
