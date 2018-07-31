@@ -1,0 +1,27 @@
+
+def anagram(string1,string2):
+    dict1={}
+    for i in string1:
+        if i in dict1:
+            dict1[i]=dict1[i]+1
+        else:
+            dict1[i]=1
+            
+    res=[]
+    for i in string2:
+        if i in dict1:
+            if dict1[i]>0:
+                dict1[i]=dict1[i]-1
+                res.append(i)
+    
+    
+    if len(string1)!=len(res):
+            return False            
+    elif len(string1)!=len(string2):
+            return False
+    else:
+            return True   
+        
+string1='aacc'
+string2='ccac'
+print (anagram(string1,string2))
