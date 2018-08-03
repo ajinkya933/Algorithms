@@ -1,0 +1,15 @@
+# Given an integer array, output all pairs that sum up to a specific value k.
+def twoSum(arr, target):
+    
+    b=set()
+    for num in arr:
+        
+        num1=target-num
+        if num1 in arr:
+            b.add((min(num1,num),max(num,num1)))
+        
+    print(b)   
+   
+arr=[1,2,3,4,5,8,7]
+target=9
+print (twoSum(arr,target))
