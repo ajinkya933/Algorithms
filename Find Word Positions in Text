@@ -1,0 +1,19 @@
+import collections
+
+def createIndex(text):
+    text = text.split(' ')
+    index=collections.defaultdict(list)
+    for pos, word in enumerate(text):
+        print(pos, word)
+        index[word].append(pos)
+        
+    return index
+    
+
+def findIndex(index, word):
+    return index[word]
+
+
+text='ajinkya chandrakant bobade ajinkya bobade'
+index = createIndex(text)
+print(findIndex(index, 'ajinkya'))
