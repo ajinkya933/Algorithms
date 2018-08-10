@@ -1,0 +1,36 @@
+"""
+
+Problem is regarding buying and selling shares
+If I buy share at less price and sell it at more price 
+then I make a profit is the concept used here
+
+
+"""
+
+
+
+
+def maxProfit(prices):
+
+    max_profit = 0 
+    min_price = float('inf')
+    
+    for price in prices:
+        min_price = min(min_price, price)
+        profit = price - min_price
+        max_profit = max(max_profit, profit)
+    return max_profit
+    
+prices=[7,1,5,3,6,4]
+print(maxProfit(prices))
+
+#First problem here is find minimum in that array first 
+#min(min_price, price)
+#iter 1: min(inf, 7) == 7 
+#iter 2: min(7, 1)==1
+#iter 3: min(1, 5 )==1
+#iter 4: min (1,3)==1
+#iter 5: min(1,6)==1 and so on hence at the end min is one
+
+# we dont calculate min of entire array and store that because in that way 
+# we will get 7-1 = 6 in profit which we donot want 
