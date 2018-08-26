@@ -1,0 +1,7 @@
+ #function that accepts an array of integers as an argument and outputs the largest number that can be created by adding two of them together.
+ 
+import heapq
+def arr_of_integers(arr):    
+   return sum(heapq.nlargest(2,arr)) 
+arr=[1,4,3,2]
+print(arr_of_integers(arr))
