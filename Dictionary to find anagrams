@@ -1,3 +1,6 @@
+#"""First create a dictionary name it dict1, and add all elements from string1 to dict1: such that each element is key. And value #associated with this key is number of times that the key appeared"""
+
+#"""For example s='aacc' will go in dict1={} as a->2, c->2"""
 
 def anagram(string1,string2):
     dict1={}
@@ -7,6 +10,7 @@ def anagram(string1,string2):
         else:
             dict1[i]=1
             
+#"""once that is done check if each element in string2 is in dict1. If yes then append that element to result. Once you come #across that element make sure in next iteration its value is reduced by 1.""
     res=[]
     for i in string2:
         if i in dict1:
@@ -14,7 +18,7 @@ def anagram(string1,string2):
                 dict1[i]=dict1[i]-1
                 res.append(i)
     
-    
+#"""In this way if string1 has exact number of non repeting elements like string2 length of res will be == length string1"""
     if len(string1)!=len(res):
             return False            
     elif len(string1)!=len(string2):
@@ -25,3 +29,7 @@ def anagram(string1,string2):
 string1='aacc'
 string2='ccac'
 print (anagram(string1,string2))
+
+#Another way
+#def isAnagram(self, s, t):
+#        return sorted(s) == sorted(t)
