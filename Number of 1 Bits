@@ -1,0 +1,11 @@
+bin(24)         #convert the number in binary form
+Out[1]: '0b11000'
+
+bin(24)[2:]     #omit first 2 digits in binary representation
+Out[2]: '11000'
+
+str(bin(24)[2:])  # convert this binary to string
+Out[3]: '11000'
+
+result.count("1")   # then count the number of ones in this string
+Out[7]: 2
