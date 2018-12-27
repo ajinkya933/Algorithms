@@ -1,0 +1,28 @@
+
+# Find Non repeting elements
+###########################################
+#   create a dictionary
+###########################################
+def find(arr):
+    res=[]
+    dict1={}
+    for i in arr:
+        if i in dict1:
+            dict1[i]=dict1[i]+1
+        else:
+            dict1[i]=1
+            
+###########################################
+#   dict1.iems() is important in iterating through the dictionary
+#   key: is the input array, value: number of times the number repets
+#   find number of times the number repeted and return that number
+###########################################            
+    for key, value in dict1.items():
+        print('key'+str(key)+' value'+str(value))
+        if value==1:
+            res.append(key)
+        
+    print(res)
+            
+arr=[1,1,2,2,3,4,4,5,5,6,7,7]
+print(find(arr))
