@@ -65,7 +65,7 @@
 # their values are retained.
 
 
-#Ideally this is how linklist looks, here 
+# Ideally this is how linklist looks, here 
 # for simplicity we defined most basic form of linklist
 # where we have avlue and next
 
@@ -86,9 +86,7 @@ head = node(1)
 # If next were a local variable, the links between nodes would be lost as soon 
 # as the initialization method completed.
 
-
 # To overome this we use instance variables, class and constructor like this
-
 
 class Node:
     def __init__(self, value):   # __init__ also called constructor is used for Object initialization
